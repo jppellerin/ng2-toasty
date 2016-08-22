@@ -1,10 +1,5 @@
 import {
-  describe,
-  expect,
-  beforeEach,
-  it,
   inject,
-  beforeEachProviders
 } from '@angular/core/testing';
 
 import {Observable} from 'rxjs/Observable';
@@ -15,7 +10,7 @@ import {ToastyService, ToastData, ToastOptions} from '../src/toasty.service';
 export function main() {
     describe('ToastyService', () => {
 
-        beforeEachProviders(() => {
+        beforeEach(() => {
             return [
                 ToastyService, ToastyConfig
             ];

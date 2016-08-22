@@ -5,7 +5,6 @@
     "test": "tsc && karma start",
     "test-watch": "tsc && karma start --no-single-run --auto-watch",
     "minify": "node node_modules/uglify-js/bin/uglifyjs bundles/ng2-toasty.js -o bundles/ng2-toasty.min.js --source-map bundles/ng2-toasty.min.js.map -c -m",
-    "prepublish": "typings install && tsc && node make.js && npm run minify",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
@@ -48,7 +47,7 @@
     "semantic-release": "^4.3.5",
     "systemjs": "^0.19.27",
     "systemjs-builder": "^0.15.16",
-    "typescript": "^1.8.7",
+    "typescript": "2.0.0",
     "typings": "^0.8.1",
     "uglify-js": "^2.6.2"
   },

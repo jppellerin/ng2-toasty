@@ -1,19 +1,12 @@
 import {
-  describe,
-  expect,
-  beforeEach,
-  it,
   inject,
   async,
-  beforeEachProviders,
   fakeAsync,
-  tick
+  tick,
+  ComponentFixture,
+  TestComponentBuilder
 } from '@angular/core/testing';
 
-import {
-  TestComponentBuilder,
-  ComponentFixture
-} from '@angular/compiler/testing';
 
 import {TEST_BROWSER_DYNAMIC_PLATFORM_PROVIDERS, TEST_BROWSER_DYNAMIC_APPLICATION_PROVIDERS}
 from '@angular/platform-browser-dynamic/testing';
@@ -41,7 +34,7 @@ export function main() {
             onClick:null
         };
 
-        beforeEachProviders(() => {
+        beforeEach(() => {
             return [TEST_BROWSER_DYNAMIC_PLATFORM_PROVIDERS, TEST_BROWSER_DYNAMIC_APPLICATION_PROVIDERS];
         });
 

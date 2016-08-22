@@ -1,18 +1,14 @@
 import {
-  describe,
-  expect,
-  beforeEach,
-  it,
   inject,
-  beforeEachProviders,
   fakeAsync,
   async,
-  tick
+  tick,
+  TestComponentBuilder,
+  ComponentFixture
 } from '@angular/core/testing';
 
 import {
-  TestComponentBuilder,
-  ComponentFixture
+  
 } from '@angular/compiler/testing';
 
 import {TEST_BROWSER_DYNAMIC_PLATFORM_PROVIDERS, TEST_BROWSER_DYNAMIC_APPLICATION_PROVIDERS}
@@ -57,7 +53,7 @@ export function main() {
         };
 
 
-        beforeEachProviders(() => {
+        beforeEach(() => {
             return [TEST_BROWSER_DYNAMIC_PLATFORM_PROVIDERS, TEST_BROWSER_DYNAMIC_APPLICATION_PROVIDERS, TestComponentBuilder, ToastyService, ToastyConfig];
         });
 
