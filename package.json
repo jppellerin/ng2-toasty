@@ -1,11 +1,11 @@
 {
   "name": "ng2-toasty",
-  "version": "1.9.0",
   "description": "Angular2 Toasty component shows growl-style alerts and messages for your web app",
   "scripts": {
     "test": "tsc && karma start",
     "test-watch": "tsc && karma start --no-single-run --auto-watch",
     "minify": "node node_modules/uglify-js/bin/uglifyjs bundles/ng2-toasty.js -o bundles/ng2-toasty.min.js --source-map bundles/ng2-toasty.min.js.map -c -m",
+    "prepublish": "typings install && tsc && node make.js && npm run minify",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
